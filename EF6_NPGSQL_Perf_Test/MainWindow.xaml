@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="EF6_NPGSQL_Perf_Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="PerfTests" Height="350" Width="525" GlowBrush="{DynamicResource AccentColorBrush}">
+  <Grid>
+    <!--Add Random Tests-->
+          <Controls:ToggleSwitch x:Name="_coldStartSwitch" OnLabel="Cold Start Done" OffLabel="Cold Start Working" IsChecked="{Binding HasColdStartFinished}" IsEnabled="False"/>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="_addButton" Width="100" Content="Add" Margin="5" Click="_addButton_OnClick" />
+        <TextBlock x:Name="_addSpeed" Width="200" Text="Add Speed: " Margin="5" />
+      </StackPanel>
+    <!--Login-->
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="_loginButton" Width="100" Content="Login" Margin="5" Click="_loginButton_OnClick" />
+        <TextBlock x:Name="_loginSpeed" Width="200" Text="Login Speed: " Margin="5" />
+      </StackPanel>
+      <!--Load Profile-->
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="_loadProfileButton" Width="100" Content="LoadProfile" Margin="5" Click="_loadProfileButton_OnClick" IsEnabled="False" />
+        <TextBlock x:Name="_loadProfileSpeed" Width="200" Text="Load Profile Speed: " Margin="5" />
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</Controls:MetroWindow>
